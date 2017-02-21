@@ -5,6 +5,67 @@ permalink: /about/
 ---
 
 ```scala
+package com.rick.employment
+
+
+import akka.actor.ActorSystem
+import akka.http.scaladsl.model.DateTime
+import akka.persistence.cassandra.query.scaladsl.CassandraReadJournal
+import akka.persistence.query.PersistenceQuery
+import de.heikoseeberger.gabbler.user.Employee.{AddEducation, AddEmployment, GetBasicInfo, SetBasicInfo}
+
+/**
+  * Created by rick on 21/2/2017.
+  */
+object EmployeeApp {
+
+
+  def main(args: Array[String]): Unit = {
+    implicit val system = ActorSystem("employee-system")
+
+    val rick = system.actorOf(Employee.props("RickYoung", PersistenceQuery(system)
+      .readJournalFor[CassandraReadJournal](
+      CassandraReadJournal.Identifier
+    )))
+
+    val setBasicInfo = SetBasicInfo("杨志冲", //名字,曾用名:杨志聪
+      DateTime(1992, 4, 2), //生日
+      Employee.MALE, //性别
+      "中华人民共和国", //国籍
+      "广东省广州市花都区花山镇", //地址
+      "13922304745", //电话号码
+      "contou.y@gmail.com") //邮箱地址
+
+    rick ! setBasicInfo
+
+    /**
+      * AddEducation(学校名,专业名,(入学时间,毕业时间))
+      */
+    val addMiddleSchool = AddEducation("邝维煜纪念中学", "文科",
+      (DateTime(2009, 9, 1), DateTime(2011, 7, 6)))
+    val addBachelor = AddEducation("南昌理工学院", "工商管理专业",
+      (DateTime(2011, 9, 1), DateTime(2015, 7, 6)))
+
+    rick ! addMiddleSchool
+    rick ! addBachelor
+
+    val addFirstEmployment = AddEmployment("广州市红甘果信息科技有限公司",
+      "安卓开发工程师", Set.empty)
+    val addSecondEmployment = AddEmployment("心晴信息科技有限公司",
+      "安卓开发工程师", Set.empty)
+
+    rick ! addFirstEmployment
+    rick ! addSecondEmployment
+  }
+
+}
+
+```
+
+```scala
+package com.rick.employment
+
+
 import akka.actor.{ActorLogging, Props}
 import akka.http.scaladsl.model.DateTime
 import akka.persistence.PersistentActor
