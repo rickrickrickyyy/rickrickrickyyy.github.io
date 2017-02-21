@@ -7,12 +7,11 @@ permalink: /about/
 ```scala
 package com.rick.employment
 
-
 import akka.actor.ActorSystem
 import akka.http.scaladsl.model.DateTime
 import akka.persistence.cassandra.query.scaladsl.CassandraReadJournal
 import akka.persistence.query.PersistenceQuery
-import de.heikoseeberger.gabbler.user.Employee.{AddEducation, AddEmployment, GetBasicInfo, SetBasicInfo}
+import com.rick.employment.Employee.{AddEducation, AddEmployment, SetBasicInfo}
 
 /**
   * Created by rick on 21/2/2017.
@@ -50,9 +49,10 @@ object EmployeeApp {
     rick ! addBachelor
 
     val addFirstEmployment = AddEmployment("广州市红甘果信息科技有限公司",
-      "安卓开发工程师", Set.empty)
+      "安卓开发工程师", Set("开发外包任务分配的安卓app", "开发安卓下载管理app", "开发一家社区app"))
     val addSecondEmployment = AddEmployment("心晴信息科技有限公司",
-      "安卓开发工程师", Set.empty)
+      "安卓开发工程师", Set("开发安卓app聊天界面,保存聊天信息到本地数据库,显示不同类型的聊天内容(文字,图片)",
+        "开发安卓app问卷系统,展示问卷,填写问卷,保存问卷", "开发各种工具类,以及提取基类,减少代码冗余"))
 
     rick ! addFirstEmployment
     rick ! addSecondEmployment
@@ -60,11 +60,11 @@ object EmployeeApp {
 
 }
 
+
 ```
 
 ```scala
 package com.rick.employment
-
 
 import akka.actor.{ActorLogging, Props}
 import akka.http.scaladsl.model.DateTime
@@ -177,7 +177,7 @@ class Employee(name: String, readJournal: EventsByPersistenceIdQuery)
 
 
   // mutable states
-  private var basicInfo: BasicInfo = BasicInfo
+  private var basicInfo: BasicInfo = BasicInfo("", DateTime(1992, 4, 2), MALE, "", "", "", "")
   private var educations = Map.empty[String, Education]
   private var employments = Map.empty[String, Employment]
 
@@ -265,7 +265,7 @@ class Employee(name: String, readJournal: EventsByPersistenceIdQuery)
     if (true) {
       val info = BasicInfo(name, birthDate,
         gender, country, address, phone, email)
-      
+
       persist(BasicInfoSet(info)) {
         basicInfoSet =>
           receiveRecover(basicInfoSet)
@@ -276,5 +276,6 @@ class Employee(name: String, readJournal: EventsByPersistenceIdQuery)
 
   override def persistenceId: String = "Employee_" + name
 }
+
 
 ```
