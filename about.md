@@ -21,7 +21,7 @@ permalink: /about/
      - 技术博客：http://rickrickrickyyy.github.io
      - GitHub：http://github.com/rickrickrickyyy
      - 期望职位：Android高级程序员，应用架构师
-     - 期望薪资：税前月薪15k~20k，特别喜欢的公司可例外
+     - 期望薪资：税前月薪10k~12k，特别喜欢的公司可例外
      - 期望城市：广州
      - 我的优势：工作认真负责,认真对着需求写完junit后才开始写代码,写完界面还要写androidTest测试界面
 
