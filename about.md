@@ -45,10 +45,29 @@ permalink: /about/
 （goMatch:类似于陌陌的社交类的app,使用了recyclerview的layoutmanager自定义了一个拱桥形状的列表) 
 
  
-## 昭阳医生 （2016年3月 ~ 至今）
+## 昭阳医生 （2016年3月 ~ 2017年2月）
 
 ### 昭阳医生app安卓端
 全权负责安卓端app的开发,使用了databinding,recyclerview,realm,retrofit等技术,然后封装了TabActivity,BaseActivity,ListFragment,BaseListAdapter这些基础类使开发效率大大提高,代码量大大减少,维护成本大大降低。实施了之后同事跟领导觉得我的开发效率非常高,之后就一直改需求。这个项目中比较困难的地方是IM聊天列表界面和问卷编辑保存界面,因为这个界面里面有大量不同类型的ViewType而且item之间还有可能产生交互(例如多选题的选项),参考了[Yigit Boyar的文章](https://realm.io/news/data-binding-android-boyar-mount/)结合recyclerview databinding 使用了mvvm的设计模式，最终简化了这两个界面的实现方法，并提高了代码的可读性可扩展性。
+
+## 在家学习spark (2017年3月 ~ 至今)
+
+### 1975年2015年天气变化地图
+1.使用spark加载天气数据和地点数据,算出每个地点每年的平均气温。使用spatial interpolation方法生成每年对应的气温图。其中为了提高运算速度使用平均气温数据构建了quad tree,从而可以使用nO(logn)的运行效率来找到对应像素点上面最近的几个有气温数据的点。
+2.使用1975-1989年的平均气温数据算出这段时间的平均气温数据,使用1990年到2015年每年的年平均气温数据减去1975-1989年的总平均气温数据,算出1990年到2015年每年相对于1975到1989年总平均气温的变化度，然后使用bilinear interpolation方法来生成1990年到2015年每年的气温变化图.
+[项目展示](https://rickrickrickyyy.github.io/observatory/)
+
+### StackOverflow问题分类
+1.读取csv问题答案文件
+2.将Rdd[String]转换为Rdd[问题]
+3.根据问题id将数据分组
+4.算出每个问题答案组的最高得分
+5.使用kmeans 算法进行分类,其中在算新的中心点的时候根据spark的特性为了提高运行效率使用了reduceByKey函数，而不是使用groupByKey(这个方法导致数据shuffle,会在集群的机器中产生网络层的数据交换因此效率变低)(kmeans算法逻辑:1算新中心点 2算新中心点的得分converged,返回结果，否则回到1)
+
+
+
+
+
 
 ---
 
