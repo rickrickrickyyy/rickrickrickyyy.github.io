@@ -22,7 +22,7 @@ permalink: /about/
      - GitHub：http://github.com/rickrickrickyyy
      - 职位：Android高级程序员，应用架构师
      - 城市：广州
-     - 我的优势：工作认真负责,认真对着需求写完junit后才开始写代码,写完界面还要写androidTest测试界面
+     - 我的优势：5年工作经验,熟悉java,scala,kotlin等语言,熟悉并在实际中应用过knn,kmeans,深度学习,opencv等技术.
 
          ---
 
@@ -56,7 +56,7 @@ permalink: /about/
 ## 昭阳医生 （2016年3月 ~ 2017年2月）
 
 ### 昭阳医生app安卓端
-全权负责安卓端app的开发,使用了databinding,recyclerview,realm,retrofit等技术,然后封装了TabActivity,BaseActivity,ListFragment,BaseListAdapter这些基础类使开发效率大大提高,代码量大大减少,维护成本大大降低。实施了之后同事跟领导觉得我的开发效率非常高,之后就一直改需求。这个项目中比较困难的地方是IM聊天列表界面和问卷编辑保存界面,因为这个界面里面有大量不同类型的ViewType而且item之间还有可能产生交互(例如多选题的选项),参考了[Yigit Boyar的文章](https://realm.io/news/data-binding-android-boyar-mount/)结合recyclerview databinding 使用了mvvm的设计模式，最终简化了这两个界面的实现方法，并提高了代码的可读性可扩展性。
+全权负责安卓端app的开发,使用了databinding,recyclerview,realm,retrofit等技术,然后封装了TabActivity,BaseActivity,ListFragment,BaseListAdapter这些基础类使开发效率大大提高,代码量大大减少,维护成本大大降低。实施了之后同事跟领导觉得我的开发效率非常高,之后就一直改需求。这个项目中比较困难的地方是IM聊天列表界面和问卷编辑保存界面,因为这个界面里面有大量不同类型的ViewType而且item之间还有可能产生交互(例如多选题的选项),使用了mvvm的设计模式，最终简化了这两个界面的实现方法，并提高了代码的可读性可扩展性。
 
 ## 广州市红甘果科技有限公司 （ 2015年1月 ~ 2016年3月 ）
 
