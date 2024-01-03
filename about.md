@@ -1,8 +1,3 @@
----
-layout: page
-title: 简历
-permalink: /about/
----
 
 # 联系方式
 
@@ -17,12 +12,10 @@ permalink: /about/
 
  - 杨志冲/男/1992
   - 本科/南昌理工学院工商管理专业
-   - 工作年限：3年
-     - 技术博客：http://rickrickrickyyy.github.io
-     - GitHub：http://github.com/rickrickrickyyy
+   - 工作年限：9年
      - 职位：Android高级程序员，应用架构师
      - 城市：广州
-     - 我的优势：5年工作经验,熟悉java,scala,kotlin等语言,熟悉并在实际中应用过knn,kmeans,深度学习,opencv等技术.
+     - 我的优势：9年工作经验,熟悉java,scala,kotlin,javascript等语言,熟悉并在实际中应用过knn,kmeans,深度学习,opencv等技术.
 
          ---
 
@@ -76,9 +69,11 @@ permalink: /about/
 
 以下均为我熟练使用的技能
 
-- 数据库相关：MySQL/MongoDb/Cassandra
+- 安卓原生开发
+- 前端h5开发
 - 版本管理、文档和自动化部署工具：Git/Git Flow/Jenkins
 - 单元测试：Junit
+- 数据库相关：MySQL/MongoDb/Cassandra
 - 云和开放平台：/友盟/Jpush/腾讯开放平台/网易云信/微博开放平台/微信应用开发
 - 后端框架：play/akka/spring/scala/iptables/linux
 
