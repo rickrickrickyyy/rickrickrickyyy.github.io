@@ -15,9 +15,51 @@
    - 工作年限：9年
      - 职位：Android高级程序员，应用架构师
      - 城市：广州
-     - 我的优势：9年工作经验,熟悉java,scala,kotlin,javascript等语言,熟悉并在实际中应用过knn,kmeans,深度学习,opencv等技术.
+     - 工作语言：英语(英语6级)，粤语(本地人)，普通话(从小说到大)
 
          ---
+# 我的优势
+1. 9年以上安卓开发经验，兴趣爱好广泛，喜欢研究新技术
+2. 熟悉java,scala,kotlin等语言，熟练掌握各个语言中的并发与并行技术
+3. 5人团队管理经验，熟悉敏捷开发，10年git使用经验
+4. 参与过2个原生+H5, 1个原生+ndk，1个全原生的项目
+5. 熟练应用factory，adapter，template method，strategy等设计模式,无数次Commonality Variability Analysis经验
+6. 熟悉并在实际中应用过knn,kmeans,深度学习,opencv等技术
+7. 熟悉图像的数据结构以及各种图像处理算法
+
+## 公司项目
+### 易方达e钱包 安卓开发组长 (2021年6月到2024年2月)
+项目概述： 新版易方达e钱包是易方达基金的新版移动端app
+
+开发环境：AndroidStudio
+
+开发语言：JAVA
+
+开发模式：MVVM   (M(crud仓库)V(ViewBinding，View，JetPack COMPOSE等)VM(提供接口以DATA(POJO)为入参更新V))
+
+项目描述：
+1. 使用RxJava + OKHttp搭建网络层框架（多个入参为path，header， body返回Single<T>的方法)
+2. 使用Recyclerview + RxJava 构建的包含重试请求，加载更多，刷新请求等功能的列表ui框架
+3. MVVM框架的各个接口以及基类
+4. 用sqlite orm + RxJava 构建的可复用CRUD repository(M层)
+5. 使用网络请求框架加载数据到M层
+6. 监听M层的数据来更新VM，VM最终会更新V
+
+### 奥玄全适App CTO (2017年9月到2021年6月)
+项目概述：
+奥玄全适App是奥玄全适的移动端鞋类商城App
+
+开发环境：AndroidStudio
+
+开发语言 Java + Kotlin + c++
+
+开发模式：MVVM
+
+项目描述：
+1. 使用RxJava + OKHttp + Retrofit 搭建网络层框架（可复用的CRUD接口）
+2. 使用Recyclerview + RxJava 构建的包含重试请求，加载更多，刷新请求等功能的列表ui框架
+3. MVVM框架使用的各个接口以及可以管理生命周期的VM基类
+4. 用androidx Room + RxJava 构建的可复用CRUD repository(M层)
 
 # 工作经历
 
@@ -48,6 +90,12 @@
 ### 昭阳医生app安卓端
 全权负责安卓端app的开发,使用了databinding,recyclerview,realm,retrofit等技术,然后封装了TabActivity,BaseActivity,ListFragment,BaseListAdapter这些基础类使开发效率大大提高,代码量大大减少,维护成本大大降低。实施了之后同事跟领导觉得我的开发效率非常高,之后就一直改需求。这个项目中比较困难的地方是IM聊天列表界面和问卷编辑保存界面,因为这个界面里面有大量不同类型的ViewType而且item之间还有可能产生交互(例如多选题的选项),使用了mvvm的设计模式，最终简化了这两个界面的实现方法，并提高了代码的可读性可扩展性。
 
+
+项目业绩：
+1. App整体框架
+2. 各种可复用的组件
+3. App的版本迭代开发
+4. 代码review
 
 ## 个人项目 
 
