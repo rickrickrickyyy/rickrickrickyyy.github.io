@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "简历"
+title: ""
 ---
 
 # 联系方式
