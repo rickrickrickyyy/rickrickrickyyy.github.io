@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "杨志冲的简历"
+title: "简历"
 ---
 
 # 联系方式
